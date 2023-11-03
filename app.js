@@ -47,3 +47,25 @@ seccion.insertAdjacentElement('beforeend',articulo2)
 seccion.insertAdjacentText('beforeend', 'Acá acaba la seccion')
 //insertar texto en formato html sin necesidad de crearlo antes
 seccion.insertAdjacentHTML('beforeend','<h3>Titulo inventado, insertado con insertAdjacentHTML</h3>')
+
+//eliminar elementos, pero no en memoria
+// seccion.remove();
+//reemplazar contenido
+// seccion.innerHTML = '<h2>Nuevo titulo de la seccio</h2>'
+//reemplazar todo el contenido html
+// seccion.outerHTML = '<h2>Reemplazo contenido</h2>'
+//Seleccion de hijos
+// seccion.children[1].textContent = 'otro titulo'
+//Modificar propiedades de un elemento en el DOM
+//traer un atributo
+console.log(seccion.getAttribute('id'))
+//traer las clases que tiene un elemento
+console.log(seccion.classList)
+//traer el nombre de la clase
+console.log(seccion.className)
+//añadir clase
+seccion.classList.add('nuevaClase')
+//eliminar clase
+seccion.classList.remove('nuevaClase')
+//si tiene la clase, la quita. Si no tiene la clase, la agrega
+seccion.classList.toggle('nuevaClase')
