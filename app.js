@@ -103,11 +103,18 @@ const section = document.getElementById("seccion")
 const titulo2 = document.getElementById("tituloSeccion")
 
 titulo2.addEventListener("click", (event)=>{
-    console.log(event.bubbles, event.cancelBubble)
-    event.stopPropagation()
-    console.log(event.bubbles, event.cancelBubble)
+    // console.log(event.bubbles, event.cancelBubble)
+    // event.stopPropagation()
+    // console.log(event.bubbles, event.cancelBubble)
     console.log("Click en el titulo")
 })
 section.addEventListener("click", (event)=>{
     console.log("Click en el seccion")
+},{
+    capture : true
 })
+//Delegacion de eventos
+// section.addEventListener("click", (event)=>{
+//     console.log(event.target, event.currentTarget)
+// })
+//eventos en capture
