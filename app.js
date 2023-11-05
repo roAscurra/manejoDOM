@@ -71,9 +71,30 @@ seccion.insertAdjacentHTML('beforeend','<h3>Titulo inventado, insertado con inse
 // seccion.classList.toggle('nuevaClase')
 
 //EVENTOS
-function clickTitulo(){
-    console.log("El usuario hizo click en el titulo")
+// function clickTitulo(){
+//     console.log("El usuario hizo click en el titulo")
+// }
+// const titulo = document.getElementById('tituloForm')
+// // titulo.onclick = clickTitulo
+// titulo.addEventListener("click", clickTitulo)
+// //remover evento
+// titulo.removeEventListener("click", clickTitulo)
+//EVENTO DOMContentLoaded
+// document.addEventListener("DOMContentLoaded", ()=>{
+//     console.log("El documento se ha cargado")
+// })
+//EVENTO SUBMIT
+const form = document.querySelector("#formulario")
+const enviarFormulario = (evento) =>{
+    event.preventDefault()
+    console.log(evento)
+    //acceder a los valores de los inputs
+    // console.log(evento.target.nombre.value, evento.target.email.value, evento.target.contraseña.value)
+    const {nombre, email, contraseña} = evento.target
+    console.log(nombre.value, email.value, contraseña.value)
+    if(nombre.value.length == 0){
+        alert("El nombre no es valido")
+    }
 }
-const titulo = document.getElementById('tituloForm')
-// titulo.onclick = clickTitulo
-titulo.addEventListener("click", clickTitulo)
+
+form.addEventListener("submit", enviarFormulario)
