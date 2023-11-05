@@ -58,14 +58,22 @@ seccion.insertAdjacentHTML('beforeend','<h3>Titulo inventado, insertado con inse
 // seccion.children[1].textContent = 'otro titulo'
 //Modificar propiedades de un elemento en el DOM
 //traer un atributo
-console.log(seccion.getAttribute('id'))
-//traer las clases que tiene un elemento
-console.log(seccion.classList)
-//traer el nombre de la clase
-console.log(seccion.className)
-//añadir clase
-seccion.classList.add('nuevaClase')
-//eliminar clase
-seccion.classList.remove('nuevaClase')
-//si tiene la clase, la quita. Si no tiene la clase, la agrega
-seccion.classList.toggle('nuevaClase')
+// console.log(seccion.getAttribute('id'))
+// //traer las clases que tiene un elemento
+// console.log(seccion.classList)
+// //traer el nombre de la clase
+// console.log(seccion.className)
+// //añadir clase
+// seccion.classList.add('nuevaClase')
+// //eliminar clase
+// seccion.classList.remove('nuevaClase')
+// //si tiene la clase, la quita. Si no tiene la clase, la agrega
+// seccion.classList.toggle('nuevaClase')
+
+//EVENTOS
+function clickTitulo(){
+    console.log("El usuario hizo click en el titulo")
+}
+const titulo = document.getElementById('tituloForm')
+// titulo.onclick = clickTitulo
+titulo.addEventListener("click", clickTitulo)
